@@ -1,7 +1,7 @@
 {
   "name": "api-backend-binance",
   "version": "1.0.0",
-  "description": "[API] Brindando datos de binance",
+  "description": "[API] Brindando datos de binance.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
