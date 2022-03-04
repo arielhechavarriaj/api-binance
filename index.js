@@ -1,15 +1,18 @@
 //use express module
 const express = require('express');
 const app = express();
-total_elements=50;
+const fs = require("fs");
 
-//Api vars
-const Api ='api/v1';
-const Port = 3000;
-const productsRoutes = require('./routes/products');
-app.use(`${Api}`, productsRoutes);
+
+
+app.get(`/binance`, function (req, res) {
+  fs.readFile( __dirname + "/" + "binance.json", 'utf8', function (err, data) {
+     console.log( data );
+     res.status(200).send(data);
+  });
+})
 
 //server listening
-app.listen(Port, () => {
-  console.log(`Server is running at port ${Port}`);
+app.listen(3000, () => {
+  console.log(`Server is running at port 3000`);
 })
