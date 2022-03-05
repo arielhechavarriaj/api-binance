@@ -7,8 +7,7 @@ const fs = require("fs");
 
 app.get(`/binance`, function (req, res) {
   fs.readFile( __dirname + "/" + "binance.json", 'utf8', function (err, data) {
-     console.log( data );
-     res.status(200).send(data);
+      res.status(200).send(data);
   });
 })
 
